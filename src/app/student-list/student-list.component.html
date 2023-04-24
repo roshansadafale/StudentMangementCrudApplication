@@ -1,0 +1,30 @@
+<table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">SID</th>
+        <th scope="col">STUDENT_NAME</th>
+        <th scope="col">STUDENT_EMAIL</th>
+        <th scope="col">STUDENT_PHONENO</th>
+        <th scope="col">ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <th scope="row">{{student.sId}}</th>
+        <td>{{student.sName}}</td>
+        <td>{{student.sEmail}}</td>
+        <td>{{student.sPhone}}</td>
+         <td>
+            <button (click)="updateStudent(student.sId)" class="btn-primary">Update</button>
+            
+            <button (click)="deleteStudent(student.sId)" class="btn-danger">Delete</button>
+         </td>
+        
+         
+         
+
+         
+      </tr>
+      
+    </tbody>
+  </table>
